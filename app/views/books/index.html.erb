@@ -1,0 +1,18 @@
+<ul>
+
+  <% @books.each do |book| %>
+    <li>
+      <%= book.title %>
+      <%= book.author.name %>
+      <br>
+  <p>reviews:</p>
+      <% book.reviews.each do |review| %>
+        <%= review.subject %>
+        <br>
+        <em> <%= review.content %> </em>
+        <br>
+      <% end %>
+    </li>
+  <% end %>
+
+</ul>
